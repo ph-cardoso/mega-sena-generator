@@ -27,8 +27,10 @@ Repo:     https://github.com/ph-cardoso/mega-sena-generator
 """
 
 import datetime as dt
+import os
 import sys
 import getopt
+import random
 
 def getArgs(argv: list) -> dict:
   """Verifica se os argumentos foram passados corretamente e retorna um dicionário com os argumentos
@@ -186,6 +188,7 @@ def main():
     arg_arquivo_output = args["output"]
 
   games = generateGames(int(arg_quantidade), int(arg_tamanho))
+  printGames(games)
   saveGames(games, arg_arquivo_output)
 
 if __name__ == '__main__':
