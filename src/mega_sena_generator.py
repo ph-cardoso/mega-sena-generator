@@ -74,8 +74,16 @@ def getArgs(argv: list) -> dict:
       print(arg_help)
       sys.exit()
     elif opt in ("-q", "--quantidade"):
+      if int(arg) < 1:
+        print("A quantidade de jogos deve ser maior que 0")
+        sys.exit(2)
+
       args_dict["quantidade"] = arg
     elif opt in ("-t", "--tamanho"):
+      if int(arg) < 6 or int(arg) > 15:
+        print("O tamanho do jogo deve estar entre 6 e 15")
+        sys.exit(2)
+
       args_dict["tamanho"] = arg
     elif opt in ("-o", "--output"):
       args_dict["output"] = arg
