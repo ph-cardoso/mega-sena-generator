@@ -20,9 +20,10 @@ Example:
   python mega_sena_generator.py
   python mega_sena_generator.py -h
 
-Author:  Pedro Henrique Lima Cardoso
-Version: 1.0.0
-Date:    2022-12-18
+Author:   Pedro Henrique Lima Cardoso
+Version:  1.0.0
+Date:     2022-12-18
+Repo:     https://github.com/ph-cardoso/mega-sena-generator
 """
 
 import datetime as dt
